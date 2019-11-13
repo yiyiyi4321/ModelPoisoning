@@ -6,11 +6,11 @@ Dependencies: Tensorflow-1.14.0, keras, numpy, scipy, scikit-learn
 
 To run federated training with 10 agents and standard averaging based aggregation, use
 ```
-python3 dist_train_w_attack.py --dataset=fMNIST --k=10 --C=1.0 --E=5 --T=40 --train --model_num=0 --gar=avg
+python dist_train_w_attack.py --dataset=fMNIST --k=10 --C=1.0 --E=5 --T=40 --train --model_num=0 --gar=avg
 ```
 To run the basic targeted model poisoning attack, use
 ```
-python3 dist_train_w_attack.py --dataset=fMNIST --k=10 --C=1.0 --E=5 --T=40 --train --model_num=0 --mal --mal_obj=single --mal_strat=converge --gar=avg
+python dist_train_w_attack.py --dataset=fMNIST --k=10 --C=1.0 --E=5 --T=40 --train --model_num=0 --mal --mal_obj=single --mal_strat=converge --gar=avg
 ```
 
 To run the alternating minimization attack with distance constraints with the parameters used in the paper, run
